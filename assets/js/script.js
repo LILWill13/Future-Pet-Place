@@ -1,16 +1,13 @@
-var queryURL = 'https://api.adoptapet.com/search/pets_at_shelter?key=A34F48&v=1&output=xml&shelter_id=2342'
+var pf = new petfinder.Client({apiKey: "RA4n7SbRFoVOEcgaMyrMS4sGV3i12K8GAYWg5x1pJ99IP3RvCh", secret: "udoTfKJrQ727p6MPRYUtPAmeTZSxrHY796AljjgM"});
 
 
 
+ 
+pf.animal.search()
+.then(function (response) {
+var animalArr = response.data.animals
+for(var i = 0; i < animalArr.length; i++){
+    
+}
+});
 
-$(document).ready(function(){
-    $('select').formSelect();
-  });
-
-  fetch(queryURL)
-  .then(function (data) {
-      return data.json();
-  })
-  .then(function (data) {
-      console.log(data)
-  })
