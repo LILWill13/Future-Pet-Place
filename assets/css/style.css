@@ -11,6 +11,7 @@ aside{
 }
 
 .container{
+    width: 100%;
     background-color: brown;
     display: flex;
    flex-direction: column;
@@ -19,11 +20,23 @@ aside{
 }
 
 .card-container{
-    margin-top: 3%;
-    display: flex;
     background-color: beige;
+    display: flex; 
+  
     height: 100%;
-    padding-top: 5%;
-    padding-left: 9%;
+    width: 100%;
+    padding: 0 10%;
+    position: relative;
 }
 
+#cards {
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    width: 45%;
+}
