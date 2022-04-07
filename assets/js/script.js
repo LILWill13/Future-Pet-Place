@@ -2,21 +2,31 @@
 
 var pf = new petfinder.Client({apiKey: "RA4n7SbRFoVOEcgaMyrMS4sGV3i12K8GAYWg5x1pJ99IP3RvCh", secret: "udoTfKJrQ727p6MPRYUtPAmeTZSxrHY796AljjgM"});
 
-// searches through the api for animals
-pf.animal.search()
+var searchButton = document.querySelector('#search-button');
+
+var animalSearch;
+
+
+$('.dropdown-trigger').dropdown();
+$('#dropdown2').on('click', 'li:not(.init)', function() {
+    return animalSearch = $(this).text()
+})
+
+searchButton.addEventListener('click', function() {
+    pf.animal.search()
     .then(function (response) {
         // takes in all the animal data objects
         var animals = response.data.animals
         // an empty array that will take in only the dogs up for adoption
         var dogArr = [];
-        // loops through all the animlas data.
+        // loops through all the animals data.
         for(let i = 0; i < animals.length; i++) {
             // singles out dogs and pushes them into the dog array
-            if(animals[i].type == "Dog"){
+            if(animals[i].type == animalSearch){
                 dogArr.push(animals[i])
         }  
     }
-        // loops through the dog arry
+        // loops through the dog array
         for(let i = 0; i < dogArr.length; i++){
 
             if(i == i){
@@ -36,6 +46,8 @@ pf.animal.search()
                 var dogGender = dogArr[i].gender
                 // gets the link to the dog
                 var url = dogArr[i].url
+
+                console.log(dogArr[i])
 
 
                 // creates the card dive
@@ -69,7 +81,7 @@ pf.animal.search()
                var ulEl = $('<ul>')
                 // creates a li element
                var liEl = $('<li>')
-                // appesnds the li to the ul
+                // appends the li to the ul
                ulEl.append(liEl)
                 // sets the li text to the dogs breed
                liEl.text(dogBreed)
@@ -83,27 +95,12 @@ pf.animal.search()
                aEl.text('Find more here')
                linkDiv.append(aEl)
 
-               
- 
-
-
-
-
                 cardDiv.append(imgDiv, contentDiv, linkDiv )
                 var cards = $('#cards')
 
                 cards.append(cardDiv)  
             }
-        }
-   
-
-    
-    
+        } 
+        console.log(dogArr)
 });
-
-
-$('#location-submit').submit(function(event) {
-    event.preventDefault();
-    console.log('?');
-    console.log(locationData.value)
 })

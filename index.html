@@ -3,8 +3,8 @@
     <head>
         <meta charset=“UTF-8”>
         <title>Future Pet Place</title>
-        <link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css”>
-        <link rel=“stylesheet” href=“./assets/css/style.css”>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
         
@@ -22,16 +22,16 @@
 
     <main>
           <aside>
-            
-            <div class="row">
-              <div class="input-field col s6">
-                <form id="location-submit">
-                  <input value="Atlanta" id="location-data" type="text" class="validate">
-                  <label class="active" for="location">Location</label>
-                  <input class="btn-floating btn-small waves-effect waves-light red" type="submit" value="Go!">
-                </form>
-              </div>
-            </div>
+          
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Animal Selection</a>
+            <ul id='dropdown2' class='dropdown-content'>
+              <li><a href="#!">Dog</a></li>
+              <li><a href="#!">Cat</a></li>
+              <li><a href="#!">Bird</a></li>
+            </ul>
+
+            <a class="waves-effect waves-teal btn-flat" id="search-button">Search!</a>
+
         
           </aside>
 
@@ -46,26 +46,9 @@
 
                     </div>
                 </div>
-
-
-            
             </div> 
         </div>
     </main>
-          
-            
-         
-            
-
-
-
-
-
-
-
-        
-
-
 
         <script
 			  src="https://code.jquery.com/jquery-3.6.0.min.js"
