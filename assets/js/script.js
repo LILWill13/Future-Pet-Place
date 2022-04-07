@@ -1,6 +1,6 @@
 // how we are able to get the data within the api
 
-// var pf = new petfinder.Client({apiKey: "RA4n7SbRFoVOEcgaMyrMS4sGV3i12K8GAYWg5x1pJ99IP3RvCh", secret: "udoTfKJrQ727p6MPRYUtPAmeTZSxrHY796AljjgM"});
+var pf = new petfinder.Client({apiKey: "RA4n7SbRFoVOEcgaMyrMS4sGV3i12K8GAYWg5x1pJ99IP3RvCh", secret: "udoTfKJrQ727p6MPRYUtPAmeTZSxrHY796AljjgM"});
 
 var searchButton = document.querySelector('#search-button');
 
@@ -10,13 +10,13 @@ var animalSearch;
 $('.dropdown-trigger').dropdown();
 $('#dropdown2').on('click', 'li:not(.init)', function() {
     return animalSearch = $(this).text()
+    
 })
 
 searchButton.addEventListener('click', function() {
     pf.animal.search()
     .then(function (response) {
-
-        console.log(response)
+        $('iframe').attr('style','display:none')
         // takes in all the animal data objects
         var animals = response.data.animals
         // an empty array that will take in only the dogs up for adoption
@@ -26,6 +26,7 @@ searchButton.addEventListener('click', function() {
             // singles out dogs and pushes them into the dog array
             if(animals[i].type == animalSearch){
                 dogArr.push(animals[i])
+              
         }  
     }
         // loops through the dog array
