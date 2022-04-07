@@ -23,7 +23,7 @@ nav {
     flex-direction: row;
     justify-content:space-between;
     align-items: flex-end;
-    height: auto;
+    height: 200px;
     padding: 0px 25px 10px 25px;
 }
 
@@ -40,7 +40,7 @@ aside {
     padding: 0px 0px 0px 25px;
 }
 
-.container{
+.container {
     width: 100%;
     background-color: #EEEEEE;
     display: flex;
@@ -49,7 +49,7 @@ aside {
     position: relative;
 }
 
-.card-container{
+.card-container {
     background-color: #EEEEEE;
     display: flex;
   
@@ -73,10 +73,10 @@ aside {
     margin: 10px;
     background-color: #e6e2dd;
 }
+
 .card img {
     height: 500px;
     object-fit: cover;
-
 }
 
 iframe {
