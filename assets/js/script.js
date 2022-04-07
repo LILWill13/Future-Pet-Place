@@ -101,3 +101,10 @@ pf.animal.search()
     
 });
 
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmFycnlnaWxyZWF0aDMiLCJhIjoiY2wxbWU2ZmdjMDAzdTNqcWdlZzZqcGM3biJ9.jU5JrihBnsXkkmBUhuSGog';
+const map = new mapboxgl.Map({
+container: 'map', // container ID
+style: 'mapbox://styles/mapbox/streets-v11', // style URL
+center: [-84.4, 33.8], // starting position [lng, lat]
+zoom: 8 // starting zoom
+});
