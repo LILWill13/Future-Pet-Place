@@ -8,9 +8,11 @@
 </head>
 
 <body>
+
         
     <nav>
         <img src="./assets/images/weblogo.png" alt="Future Pet Place">
+        <h3 class="personal-greeting">Welcome to our website</h3>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#">Link1</a></li>
             <li><a href="#">Link2</a></li>
@@ -29,7 +31,17 @@
             <a class="waves-effect waves-teal btn-flat" id="search-button">Search!</a>
 
         
-           
+            <form>
+                <div class="remember">
+                  <label for="entername">Enter your name:</label>
+                  <input id="entername" type="text" required />
+                  <input id="submitname" type="submit" value="Say hello" />
+                </div>
+                <div class="forget">
+                  <label for="forgetname">Want me to forget you?</label>
+                  <input id="forgetname" type="reset" value="Forget" />
+                </div>
+              </form>  
 
             
         </aside>
@@ -57,5 +69,7 @@
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
         <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/input.js"></script>
+        
 
 </html>
