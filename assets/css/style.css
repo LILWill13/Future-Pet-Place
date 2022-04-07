@@ -1,42 +1,92 @@
+body {
+    background-color: #EEEEEE;
+}
+
 main {
-   display: flex;
-background-color: aqua;
-}
-
-aside{
-    background-color: blueviolet;
-    height: 100vh;
-    
-    width:20vw;
-}
-
-.container{
-    width: 100%;
-    background-color: brown;
     display: flex;
-   flex-direction: column;
-   align-items: center;
-   position: relative;
+    background-color: #EEEEEE;
 }
 
-.card-container{
-    background-color: beige;
-    display: flex; 
+.card-action a {
+    color: #1C658C;
+}
+
+/* colors */
+/* #1C658C dark blue */
+/* #398AB9 light blue */
+/* #D8D2CB tan */
+/* #EEEEEE light tan */
+
+nav {
+    background-color: #1C658C;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-end;
+    height: 200px;
+    padding: 0px 25px 10px 25px;
+}
+
+nav img {
+    width: 400px;
+    height: auto;
+}
+
+aside {
+    background-color: #398AB9;
+    color: white;
+    height: auto;
+    width:400px;
+    padding: 0px 0px 0px 25px;
+}
+
+.container {
+    width: 100%;
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.card-container {
+    background-color: #EEEEEE;
+    display: flex;
   
     height: 100%;
     width: 100%;
-    padding: 0 10%;
+    /* padding: 0 10%; */
+
     position: relative;
 }
 
 #cards {
     width: 100%;
-    background-color: blue;
+    background-color: #EEEEEE;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.card{
-    width: 45%;
+.card {
+    width: 28%;
+    margin: 10px;
+    background-color: #e6e2dd;
+}
+
+.card img {
+    height: 500px;
+    object-fit: cover;
+}
+
+iframe {
+    margin-top: 50px;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    border: none;
 }
