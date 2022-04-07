@@ -1,10 +1,12 @@
 // how we are able to get the data within the api
 
-var pf = new petfinder.Client({apiKey: "RA4n7SbRFoVOEcgaMyrMS4sGV3i12K8GAYWg5x1pJ99IP3RvCh", secret: "udoTfKJrQ727p6MPRYUtPAmeTZSxrHY796AljjgM"});
+// var pf = new petfinder.Client({apiKey: "RA4n7SbRFoVOEcgaMyrMS4sGV3i12K8GAYWg5x1pJ99IP3RvCh", secret: "udoTfKJrQ727p6MPRYUtPAmeTZSxrHY796AljjgM"});
 
 // searches through the api for animals
 pf.animal.search()
     .then(function (response) {
+
+        console.log(response)
         // takes in all the animal data objects
         var animals = response.data.animals
         // an empty array that will take in only the dogs up for adoption
@@ -100,4 +102,3 @@ pf.animal.search()
     
     
 });
-
