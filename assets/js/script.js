@@ -10,11 +10,13 @@ var animalSearch;
 $('.dropdown-trigger').dropdown();
 $('#dropdown2').on('click', 'li:not(.init)', function() {
     return animalSearch = $(this).text()
+    
 })
 
 searchButton.addEventListener('click', function() {
     pf.animal.search()
     .then(function (response) {
+        $('iframe').attr('style','display:none')
         // takes in all the animal data objects
         var animals = response.data.animals
         // an empty array that will take in only the dogs up for adoption
@@ -24,6 +26,7 @@ searchButton.addEventListener('click', function() {
             // singles out dogs and pushes them into the dog array
             if(animals[i].type == animalSearch){
                 dogArr.push(animals[i])
+              
         }  
     }
         // loops through the dog array
@@ -46,9 +49,6 @@ searchButton.addEventListener('click', function() {
                 var dogGender = dogArr[i].gender
                 // gets the link to the dog
                 var url = dogArr[i].url
-
-                console.log(dogArr[i])
-
 
                 // creates the card dive
                var cardDiv = $('<div>')
@@ -100,15 +100,8 @@ searchButton.addEventListener('click', function() {
 
                 cards.append(cardDiv)  
             }
-        } 
-        console.log(dogArr)
-});
-})
+        }
+   
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYmFycnlnaWxyZWF0aDMiLCJhIjoiY2wxbWU2ZmdjMDAzdTNqcWdlZzZqcGM3biJ9.jU5JrihBnsXkkmBUhuSGog';
-const map = new mapboxgl.Map({
-container: 'map', // container ID
-style: 'mapbox://styles/mapbox/streets-v11', // style URL
-center: [-84.4, 33.8], // starting position [lng, lat]
-zoom: 8 // starting zoom
-});
+    }
+)});
