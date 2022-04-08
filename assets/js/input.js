@@ -6,7 +6,7 @@ const getName = document.querySelector("#entername");
 const submitBtn = document.querySelector("#submitname");
 const forgetBtn = document.querySelector("#forgetname");
 
-const h1 = document.querySelector("h1");
+const h2 = document.querySelector("h2");
 const greeting = document.querySelector(".personal-greeting");
 
 form.addEventListener("submit", function (e) {
@@ -28,13 +28,13 @@ forgetBtn.addEventListener("click", function () {
 function nameDisplayCheck() {
   if (localStorage.getItem("name")) {
     let name = localStorage.getItem("name");
-    h1.textContent = `Welcome ${name}!`;
+    h2.textContent = `Welcome ${name}!`;
     greeting.textContent = `Welcome to our website, ${name}! We hope you find your bestfriend!`;
 
     forgetMe.style.display = "block";
     rememberMe.style.display = "none";
   } else {
-    h1.textContent = `Welcome to our website `;
+    h2.textContent = `Welcome to our website `;
     greeting.textContent = `Welcome to our website. We hope you enjoy your visit.`;
 
     forgetMe.style.display = "none";
