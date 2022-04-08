@@ -44,8 +44,8 @@ This project helped our team to become employer ready by presenting the team mem
 ```
 
 ## URLs
-###Github
+### Github
 https://github.com/LILWill13/Future-Pet-Place
 
-###Website
-pending
+### Website
+https://lilwill13.github.io/Future-Pet-Place/
