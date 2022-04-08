@@ -29,7 +29,7 @@ function nameDisplayCheck() {
   if (localStorage.getItem("name")) {
     let name = localStorage.getItem("name");
     h1.textContent = `Welcome ${name}!`;
-    greeting.textContent = `Welcome to our webiste, ${name}! We hope you find your bestfriend!`;
+    greeting.textContent = `Welcome to our website, ${name}! We hope you find your bestfriend!`;
 
     forgetMe.style.display = "block";
     rememberMe.style.display = "none";

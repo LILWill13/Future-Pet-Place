@@ -17,6 +17,7 @@ searchButton.addEventListener('click', function() {
     pf.animal.search()
     .then(function (response) {
         $('iframe').attr('style','display:none')
+        $('#h2main').attr('style','display:none')
         // takes in all the animal data objects
         var animals = response.data.animals
         // an empty array that will take in only the dogs up for adoption
